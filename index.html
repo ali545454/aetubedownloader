@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AE Tube Downloader</title>
+    <link rel="icon" href="images/AE Tube.ico" type="image/x-icon">
+    <!-- تضمين خط عربي وإنجليزي -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- أيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- ربط ملف التنسيق الخارجي -->
+    <link rel="stylesheet" href="style.css">
+    
+
+</head>
+<body>
+    <!-- الهيدر -->
+    <header>
+        <button onclick="changeLanguage('ar')">العربية</button>
+        <button onclick="changeLanguage('en')">English</button>
+        
+        <h1 id="heading">مرحبًا بكم في AE Tube Downloader</h1>
+        <p id="description">برنامج سهل وسريع لتحميل الفيديوهات.</p>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main>
+        <section>
+            <img src="images/AE Tube.ico" alt="شعار البرنامج" width="150" height="150">
+            <h2 id="h2download">تحميل البرنامج</h2>
+            <p id="downloadDescription">اضغط على الزر أدناه لتحميل برنامج AE Tube Downloader مجانًا:</p>
+            <a href="https://www.dropbox.com/scl/fi/tr9ykbfget72pf6hp8rjb/AE-Tube-Downloader.exe?rlkey=al4d038no4877o8udt9evz99e&st=wf00pulw&dl=1
+            " download="AE Tube Downloader.exe">
+                <button id="downloadButton">تحميل الآن</button>
+            </a>
+        </section>
+        
+        <section>
+            <h2 id="developer">التواصل مع المطور</h2>
+            <p id="email"><a href="https://aaboudooh@gmail.com">aaboudooh@gmail.com</a></p>
+        </section>
+        <section>
+            <h2 id="attention">تنبيه هام !</h2>
+            <p id="attentionP">
+                في بعض الأحيان لن يعمل البرنامج بسب قيود windows defender الذي يشك في الكود المصدري للبرنامج ، ولكن برنامجنا موثوق به ومعتمد من موقع virustotal فيمكنك إيقافة وتثبيت البرنامج لكي يعمل معك بنجاح</p>
+        </section>
+    </main>
+
+    <!-- الفوتر -->
+    <footer>
+        <p id="rights">جميع الحقوق محفوظة &copy; 2024 - AE Tube Downloader</p>
+        <div class="social-links">
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/ali-elhfni-34230a2ba/" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/aboudooh" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+        </div>
+    </footer>
+</body>
+    <!-- إضافة سكربت التبديل بين اللغتين -->
+    <script>
+        function changeLanguage(lang) {
+            const langData = {
+                ar: {
+                    title: "AE Tube Downloader",
+                    heading: "مرحبًا بكم في AE Tube Downloader",
+                    description: "برنامج سهل وسريع لتحميل الفيديوهات.",
+                    downloadText: "تحميل الآن",
+                    developer: "التواصل مع المطور",
+                    email: "aaboudooh@gmail.com",
+                    rights: "جميع الحقوق محفوظة &copy; 2024 - AE Tube Downloader",
+                    downloadDescription: "اضغط على الزر أدناه لتحميل برنامج AE Tube Downloader مجانًا:",
+                    h2download:"تحميل البرنامج",
+                    attention:"تنبيه هام !",
+                    attentionP:" في بعض الأحيان لن يعمل البرنامج بسب قيود windows defender الذي يشك في الكود المصدري للبرنامج ، ولكن برنامجنا موثوق به ومعتمد من موقع virustotal فيمكنك إيقافة وتثبيت البرنامج لكي يعمل معك بنجاح",
+                },
+                en: {
+                    title: "AE Tube Downloader",
+                    heading: "Welcome to AE Tube Downloader",
+                    description: "An easy and fast program to download videos.",
+                    downloadText: "Download Now",
+                    developer: "Contact the Developer",
+                    rights: "All rights reserved &copy; 2024 - AE Tube Downloader",
+                    downloadDescription: "Click the button below to download AE Tube Downloader for free:",
+                    h2download:"Download the program",    
+                    attention:"Important alert!",
+                    attentionP:"Sometimes the program will not work due to the limitations of Windows Defender, which doubts the source code of the program, but our program is reliable and approved by the VirusTotal website, so you can stop it and install the program so that it works for you successfully.",
+                }
+            };
+
+            // تغيير النصوص بناءً على اللغة المختارة
+            document.getElementById('heading').textContent = langData[lang].heading;
+            document.getElementById('description').textContent = langData[lang].description;
+            document.getElementById('downloadButton').textContent = langData[lang].downloadText;
+            document.getElementById('developer').textContent = langData[lang].developer;
+            document.getElementById('rights').innerHTML = langData[lang].rights;
+            document.getElementById('downloadDescription').textContent = langData[lang].downloadDescription;
+            document.getElementById('h2download').textContent = langData[lang].h2download;
+            document.getElementById('attention').textContent = langData[lang].attention;
+            document.getElementById('attentionP').textContent = langData[lang].attentionP;
+            // تغيير عنوان الصفحة
+            document.title = langData[lang].title;
+            
+            // تغيير الاتجاه
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+        }
+        document.getElementById('downloadButton').addEventListener('click', function() {
+        const link = document.createElement('a');
+        link.href = 'رابط_الملف_المباشر'; // الرابط المباشر للملف
+        link.download = 'اسم_الملف.exe'; // اسم الملف الذي سيتم تحميله
+        link.click();
+    });
+    </script>
+</html>

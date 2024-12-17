@@ -1,0 +1,178 @@
+/* إعدادات الخطوط */
+body {
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+button {
+    font-family: 'Cairo';
+}
+
+/* تنسيق الهيدر */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #B22222; /* اللون الأحمر الداكن */
+    color: white;
+}
+
+header button {
+    background-color: #fff;
+    color: #B22222; /* اللون الأحمر الداكن */
+    padding: 10px 20px;
+    border: none;
+    margin: 0 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color: #9B1E1E;
+}
+
+/* تنسيق المحتوى الرئيسي */
+main {
+    padding: 40px 10%;
+}
+
+section {
+    background-color: #ffffff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    color: #B22222; /* اللون الأحمر الداكن */
+}
+
+#email a {
+    color: #B22222;
+}
+
+/* تنسيق الأزرار */
+button {
+    background-color: #B22222; /* اللون الأحمر الداكن */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+button:hover {
+    background-color: #9B1E1E;
+}
+
+/* تنسيق الفوتر */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    position: relative;
+    width: 100%; /* تأكد من أن الفوتر يأخذ عرض الصفحة بالكامل */
+    bottom: 0;
+    left: 0; /* تحديد بداية الفوتر من اليسار */
+    margin: 0;
+    padding: 20px 0;
+}
+
+/* تنسيق الفوتر للحفاظ على المسافات */
+footer p {
+    margin: 0;
+    padding: 5px;
+}
+
+/* إعدادات الروابط الاجتماعية في الفوتر */
+.social-links a {
+    color: white;
+    margin: 0 15px;
+    font-size: 20px;
+    text-decoration: none; /* إزالة الخط تحت الأيقونات */
+}
+
+.social-links a:hover {
+    color: #B22222; /* اللون الأحمر الداكن */
+}
+
+/* استجابة الموقع للأجهزة الصغيرة */
+@media (max-width: 768px) {
+    main {
+        padding: 20px 5%;
+    }
+
+    section {
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 22px; /* تقليل حجم الخط للأجهزة اللوحية */
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+
+    .social-links a {
+        margin: 0 10px;
+        font-size: 18px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+
+    img {
+        width: 120px; /* تقليل حجم الصورة للأجهزة الصغيرة */
+        height: auto;
+    }
+}
+
+/* استجابة للأجهزة الصغيرة جدًا */
+@media (max-width: 480px) {
+    header {
+        padding: 15px;
+    }
+
+    section {
+        margin: 10px 0;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 18px; /* تقليل حجم الخط أكثر للأجهزة الصغيرة */
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    .social-links a {
+        font-size: 16px;
+    }
+
+    footer {
+        padding: 15px 0;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+    img {
+        width: 100px; /* تقليل حجم الصورة للأجهزة الصغيرة جدًا */
+        height: auto;
+    }
+}
